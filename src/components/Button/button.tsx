@@ -2,6 +2,7 @@ import {
   AnchorHTMLAttributes,
   ButtonHTMLAttributes,
   FC,
+  useEffect,
 } from "react";
 import ClassNames from "classnames";
 
@@ -25,6 +26,8 @@ interface BaseButtonProps {
   href?: string;
   children: React.ReactNode;
 }
+
+const search = window.location.search;
 
 // 这里使用的是交叉类型，可以将一个类型合并为多个类型
 type NativeButtonProps = ButtonHTMLAttributes<HTMLElement> & BaseButtonProps;
